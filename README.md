@@ -1,1 +1,0 @@
-# coredge-sdk-lib

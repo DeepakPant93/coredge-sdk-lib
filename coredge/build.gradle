@@ -30,11 +30,6 @@ android {
 
 def acraVersion = '5.7.0'
 
-task wrapper(type: Wrapper){
-    gradleVersion = '2.14.1'
-}
-
-
 dependencies {
 
     implementation 'androidx.appcompat:appcompat:1.2.0'
@@ -71,62 +66,4 @@ dependencies {
     implementation "ch.acra:acra-limiter:$acraVersion"
     implementation "ch.acra:acra-advanced-scheduler:$acraVersion"
     implementation "ch.acra:acra-mail:$acraVersion"
-
-// For DASH
-//    implementation 'com.google.android.exoplayer:exoplayer-dash:2.8.3'
-//// For SmoothStreaming
-//    implementation 'com.google.android.exoplayer:exoplayer-smoothstreaming:2.8.3'
-//    implementation 'com.google.android.exoplayer:exoplayer-core:2.8.3'
-//    implementation 'com.google.android.exoplayer:exoplayer-hls:2.8.3'
-//    implementation 'com.google.android.exoplayer:exoplayer-ui:2.8.3'
-
-    compile 'org.eclipse.paho:org.eclipse.paho.client.mqttv3:1.1.0'
-    compile 'org.eclipse.paho:org.eclipse.paho.android.service:1.1.1'
-}
-
-apply plugin: 'maven-publish' // Apply this plugin at the top of your library build.gradle
-
-//def githubProperties = new Properties()
-//githubProperties.load(new FileInputStream(rootProject.file("github.properties"))) //Set env variable GPR_USER & GPR_API_KEY if not adding a properties file
-
-publishing {
-    publications {
-        bar(MavenPublication) {
-            groupId 'com.admin.coredge' // Replace with group ID
-            artifactId 'coredge'
-            version '1.0.1'
-            artifact("$buildDir/outputs/aar/coredge-release.aar")
-        }
-
-//        create<MavenPublication>("gpr") {
-//            run {
-//            groupId 'com.admin.coredge' // Replace with group ID
-//            artifactId '5gapp'
-//            version '1.0.0'
-//            artifact("/home/deepakp/Misc/Projects/CoreEdge/MobileAp/5gapp-mobileapp/coredge/build/outputs/aar/5gapp-release.aar")
-//           }
-//        }
-    }
-
-    repositories {
-        maven {
-            name = "GitHubPackages"
-            /** Configure path of your package repository on Github
-             ** Replace GITHUB_USERID with your/organisation Github userID
-             ** and REPOSITORY with the repository name on GitHub
-             */
-            url = uri("https://maven.pkg.github.com/DeepakPant93/coredge-andriod-lib")
-            credentials {
-                /** Create github.properties in root project folder file with
-                 ** gpr.usr=GITHUB_USER_ID & gpr.key=PERSONAL_ACCESS_TOKEN
-                 ** Set env variable GPR_USER & GPR_API_KEY if not adding a properties file**/
-
-//                username = githubProperties['gpr.usr'] ?: System.getenv("GPR_USER")
-//                password = githubProperties['gpr.key'] ?: System.getenv("GPR_API_KEY")
-
-                username = 'DeepakPant93'
-                password = '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'
-            }
-        }
-    }
 }

@@ -1,33 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#212539</color>
-    <color name="purple_700">#212539</color>
-    <color name="teal_200">#c62828</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="splashBackground">#6060AA</color>
-    <color name="appBackground">#FFFFFF</color>
-    <color name="textColor">#FFFFFF</color>
-    <color name="loadingColor">#c62828</color>
-    <color name="gaugesBackground">#AACCCCCC</color>
-    <color name="progressBackground">#AACCCCCC</color>
-    <color name="progressColor">#c62828</color>
-    <color name="dlGauge">#1de9b6</color>
-    <color name="dlText">#1de9b6</color>
-    <color name="ulGauge">#ffc107</color>
-    <color name="ulText">#ffc107</color>
-    <color name="pingText">#c62828</color>
-    <color name="jitterText">#AA6060</color>
-    <color name="serverText">#808080</color>
-    <color name="startButton_background">#6060AA</color>
-    <color name="startButton_text">#FFFFFF</color>
-    <color name="failButton_background">#6060AA</color>
-    <color name="failButton_text">#FFFFFF</color>
-    <color name="shareButton_background">#BF360C</color>
-    <color name="shareButton_text">#FFFFFF</color>
-    <color name="restartButton_background">#6060AA</color>
-    <color name="restartButton_text">#FFFFFF</color>
-    <color name="privacyLinks">#808080</color>
 </resources>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_bg"
+    tools:context=".Activity.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/twenty_four"
+        android:paddingTop="@dimen/fourty"
+        android:paddingRight="@dimen/twenty_four"
+        tools:ignore="MissingConstraints">
+
+        <ImageView android:src="@drawable/logo_login"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/ninty_five"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_gravity="center_horizontal" />
+
+        <!-- Name Label -->
+
+        <EditText
+            android:id="@+id/input_Fname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sixty"
+            android:layout_marginTop="@dimen/fourty"
+            android:hint="First Name *"
+            android:background="@drawable/username"
+            android:paddingLeft="@dimen/ten"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/fifteen_sp" />
+
+        <EditText
+            android:id="@+id/input_Lname"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sixty"
+            android:layout_marginTop="1dp"
+            android:paddingLeft="@dimen/ten"
+            android:hint="Last Name *"
+            android:background="@drawable/password"
+            android:inputType="textPersonName"
+            android:textSize="@dimen/fifteen_sp" />
+
+
+        <!--        <EditText android:id="@+id/input_dob"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:textSize="@dimen/fifteen_sp"-->
+        <!--            android:inputType="text"-->
+        <!--            android:singleLine="true"-->
+        <!--            android:hint="Date of Birth (DD-MM-YYYY) *" />-->
+
+        <RadioGroup
+            android:id="@+id/gender"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/twelve"
+            android:backgroundTint="@color/pingText"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/male"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="left"
+                android:checked="true"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:text="Male" />
+
+            <RadioButton
+                android:id="@+id/female"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/thirty"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:text="Female" />
+        </RadioGroup>
+
+        <!--        <EditText android:id="@+id/input_mobile"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:inputType="phone"-->
+        <!--            android:textSize="@dimen/fifteen_sp"-->
+        <!--            android:hint="Mobile No *" />-->
+
+
+        <EditText
+            android:id="@+id/input_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sixty"
+            android:hint="Email *"
+            android:paddingLeft="@dimen/ten"
+            android:inputType="textEmailAddress"
+            android:background="@drawable/username"
+            android:textSize="@dimen/fifteen_sp" />
+
+        <!-- Password Label -->
+
+
+        <EditText
+            android:id="@+id/input_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/sixty"
+            android:layout_marginTop="1dp"
+            android:paddingLeft="@dimen/ten"
+            android:background="@drawable/password"
+            android:hint="Password *"
+            android:inputType="textPassword"
+            android:textSize="@dimen/fifteen_sp" />
+
+
+        <!-- Signup Button -->
+        <ImageButton
+            android:id="@+id/btn_signup"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fifty_six"
+            android:layout_marginTop="@dimen/twenty"
+            android:layout_marginBottom="@dimen/twenty_four"
+            android:background="@drawable/register_btn"
+            android:padding="@dimen/twelve"
+            android:text="Save and Continue"
+            android:textColor="@color/white" />
+
+        <ImageButton
+            android:id="@+id/link_login"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/fifty_six"
+            android:layout_marginTop="@dimen/ten"
+            android:layout_marginBottom="@dimen/fifty_six"
+            android:gravity="center"
+            android:onClick="OpenLogin"
+            android:background="@drawable/login_btn"
+            android:text="Already Account Login"
+            android:textColor="@color/cardview_dark_background"
+            android:textSize="@dimen/eighteen_sp" />
+
+        <ProgressBar
+            android:id="@+id/loading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/input_password"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
